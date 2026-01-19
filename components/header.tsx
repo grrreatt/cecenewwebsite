@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
@@ -24,13 +24,13 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
       {/* Top bar */}
-      <div className="hidden md:block bg-[#1a2744] text-white py-2">
+      <div className="hidden md:block bg-[#1a2744] text-white py-2.5">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <span>Info@cecevents.in</span>
-            <span className="flex items-center gap-1">
-              <Phone className="w-3 h-3" /> +91 96545 13231
-            </span>
+          <div className="flex items-center gap-8">
+            <a href="mailto:info@cecevents.in" className="hover:text-[#d4a039] transition-colors">Info@cecevents.in</a>
+            <a href="tel:+919654513231" className="flex items-center gap-2 hover:text-[#d4a039] transition-colors">
+              <Phone className="w-4 h-4" /> +91 9654513231
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <span>New Delhi, India</span>
@@ -39,15 +39,18 @@ export function Header() {
       </div>
       
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo-new.png"
             alt="Cecevents"
-            width={40}
-            height={40}
-            className="w-10 h-10"
+            width={45}
+            height={45}
+            className="w-11 h-11"
           />
-          <span className="text-xl font-bold text-[#1a2744]">CECEVENTS</span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-[#1a2744] leading-tight">CECEVENTS</span>
+            <span className="text-xs text-[#d4a039] font-semibold">Premium Event Staffing</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -69,14 +72,23 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <Link href="/contact">
-            <Button className="hidden sm:flex bg-[#d4a039] text-white hover:bg-[#b8862e] text-sm px-6 shadow-md">
+            <Button className="hidden sm:flex bg-[#d4a039] text-white hover:bg-[#b8862e] text-sm px-7 py-2 font-semibold shadow-md hover:shadow-lg transition-all">
               Get Quote
             </Button>
           </Link>
+          <a
+            href="https://wa.me/919654513231?text=Hello%20Cecevents%2C%20I%20need%20assistance"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-2 bg-[#25D366] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-md"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Chat
+          </a>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-[#1a2744] p-2"
+            className="lg:hidden text-[#1a2744] p-2 hover:bg-gray-100 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,27 +98,38 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-4 py-6 shadow-lg">
-          <div className="flex flex-col gap-4">
+        <div className="lg:hidden bg-white border-t border-gray-200 px-4 py-6 shadow-lg animate-in fade-in slide-in-from-top-2">
+          <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`py-2 font-medium transition-colors ${
+                className={`py-2.5 px-3 rounded-lg font-medium transition-colors ${
                   pathname === link.href
-                    ? "text-[#d4a039]"
-                    : "text-[#1a2744] hover:text-[#d4a039]"
+                    ? "bg-[#d4a039]/10 text-[#d4a039]"
+                    : "text-[#1a2744] hover:bg-gray-100"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="w-full">
-              <Button className="bg-[#d4a039] text-white hover:bg-[#b8862e] mt-4 w-full shadow-md">
-                Get Quote
-              </Button>
-            </Link>
+            <div className="border-t border-gray-200 my-2 pt-3 flex gap-3">
+              <Link href="/contact" className="flex-1">
+                <Button className="bg-[#d4a039] text-white hover:bg-[#b8862e] w-full font-semibold shadow-md">
+                  Get Quote
+                </Button>
+              </Link>
+              <a
+                href="https://wa.me/919654513231?text=Hello%20Cecevents%2C%20I%20need%20assistance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-[#25D366] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-md flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Chat
+              </a>
+            </div>
           </div>
         </div>
       )}

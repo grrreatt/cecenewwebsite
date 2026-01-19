@@ -38,7 +38,7 @@ export function WhatsAppChat() {
               👋 Hi! How can we help you today?
             </p>
             <a
-              href="https://wa.me/919315424253?text=Hello%20Cecevents%2C%20I%20need%20assistance"
+              href="https://wa.me/919654513231?text=Hello%20Cecevents%2C%20I%20need%20assistance"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-[#25D366] text-white py-3 rounded-lg font-semibold text-center hover:bg-[#20BA5A] transition-colors"

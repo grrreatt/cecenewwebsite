@@ -1,7 +1,8 @@
 'use client';
 
-import { Linkedin, Instagram, Facebook, Twitter, ChevronUp } from "lucide-react"
+import { Linkedin, Instagram, Facebook, Mail, ChevronUp, Phone, Twitter } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -13,44 +14,48 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#d4a039] to-[#b8862e] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <Image
+                src="/logo-new.png"
+                alt="Cecevents"
+                width={50}
+                height={50}
+                className="w-12 h-12"
+              />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">CECEVENTS</span>
-                <span className="text-[10px] text-gray-400 -mt-1">Event Management</span>
+                <span className="text-xl font-bold text-white leading-tight">CECEVENTS</span>
+                <span className="text-xs text-[#d4a039] font-semibold">Premium Event Services</span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
               India&apos;s leading provider of professional event staffing and registration solutions 
               for medical conferences, corporate summits, and exhibitions.
             </p>
-            <div className="flex gap-3 mt-6">
-              <Link
-                href="#"
+            <div className="flex gap-3">
+              <a
+                href="https://www.linkedin.com/company/cecevents"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#d4a039] transition-colors"
               >
                 <Linkedin className="w-5 h-5 text-white" />
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#d4a039] transition-colors"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#d4a039] transition-colors"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </Link>
-              <Link
-                href="#"
+              </a>
+              <a
+                href="https://www.instagram.com/chronicleeventsandconferences"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#d4a039] transition-colors"
               >
                 <Instagram className="w-5 h-5 text-white" />
-              </Link>
+              </a>
+              <a
+                href="https://wa.me/919654513231?text=Hello%20Cecevents%2C%20I%20need%20assistance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-[#25D366] flex items-center justify-center hover:bg-[#20BA5A] transition-colors"
+              >
+                <Mail className="w-5 h-5 text-white" />
+              </a>
             </div>
           </div>
 
@@ -97,31 +102,44 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-4 text-lg">Contact Us</h4>
-            <div className="flex flex-col gap-3 text-sm">
+            <h4 className="font-semibold text-white mb-5 text-base">Contact Us</h4>
+            <div className="flex flex-col gap-5 text-sm">
               <div>
-                <p className="text-gray-500 text-xs mb-1">Phone</p>
-                <p className="text-white">+91 96545 13231</p>
-                <p className="text-white">+91 82850 44061</p>
+                <p className="text-gray-400 text-xs font-semibold uppercase mb-2">Phone</p>
+                <a href="tel:+919654513231" className="text-white hover:text-[#d4a039] transition-colors font-medium">
+                  +91 9654513231
+                </a>
+                <p className="text-gray-500 text-xs mt-1">+91 82850 44061</p>
               </div>
               <div>
-                <p className="text-gray-500 text-xs mb-1">Email</p>
-                <p className="text-white">Info@cecevents.in</p>
+                <p className="text-gray-400 text-xs font-semibold uppercase mb-2">Email</p>
+                <a href="mailto:info@cecevents.in" className="text-white hover:text-[#d4a039] transition-colors font-medium">
+                  Info@cecevents.in
+                </a>
               </div>
               <div>
-                <p className="text-gray-500 text-xs mb-1">Address</p>
-                <p className="text-white leading-relaxed">
-                  F322/A, Old MB Road, Lado Sarai,<br />
-                  New Delhi, 110030
-                </p>
+                <p className="text-gray-400 text-xs font-semibold uppercase mb-2">Locations</p>
+                <div className="text-gray-300 text-xs leading-relaxed space-y-3">
+                  <div>
+                    <p className="text-white font-semibold mb-1">F322/A, Old MB Road, Lado Sarai</p>
+                    <p>New Delhi, 110030</p>
+                  </div>
+                  <p className="text-gray-400 font-semibold">and</p>
+                  <div>
+                    <p className="text-white font-semibold mb-1">CRS Tower, Chattarpur</p>
+                    <p>New Delhi, 110074</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/10 gap-4">
-          <p className="text-gray-500 text-sm">2024 CECEVENTS. All rights reserved.</p>
-          <p className="text-gray-500 text-sm">Professional Event Management Solutions</p>
+          <p className="text-gray-500 text-sm">© 2024 CECEVENTS. All rights reserved.</p>
+          <div className="flex items-center gap-3">
+            <p className="text-gray-500 text-sm">Professional Event Management Solutions</p>
+          </div>
         </div>
       </div>
 

@@ -1,50 +1,34 @@
 'use client';
 
 import React from "react"
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Linkedin, Instagram, CheckCircle, Mail, MessageCircle } from 'lucide-react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { sendFormEmail } from '@/app/actions/send-email';
-import { CheckCircle } from 'lucide-react';
 
 export default function CareerPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-  });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    
+    const formElement = e.currentTarget;
+    
     try {
-      const result = await sendFormEmail(formData);
-      if (result.success) {
+      const response = await fetch('https://formspree.io/f/xyzaabjy', {
+        method: 'POST',
+        body: new FormData(formElement),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
         setSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          message: '',
-        });
+        formElement.reset();
         setTimeout(() => setSubmitted(false), 5000);
       }
     } catch (error) {
@@ -58,142 +42,225 @@ export default function CareerPage() {
     <div className="min-h-screen bg-white">
       <Header />
 
+      {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            {/* Page Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#1a2744] mb-4">
-                Join Our <span className="text-[#d4a039]">Team</span>
-              </h1>
-              <p className="text-lg text-gray-600">
-                We're always looking for talented individuals to join CECEVENTS. 
-                Share your details and we'll get back to you with opportunities.
-              </p>
-            </div>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1a2744] mb-6">
+              Join Our <span className="text-[#d4a039]">Team</span>
+            </h1>
+            <p className="text-lg text-gray-600">
+              We're looking for talented professionals to join us in creating outstanding event experiences. 
+              Share your passion and expertise with us.
+            </p>
+          </div>
 
-            {/* Success Message */}
-            {submitted && (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8 flex items-center gap-4">
-                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-green-900">Submission Received!</h3>
-                  <p className="text-green-800 text-sm">
-                    Thank you for your interest. We'll review your details and contact you soon.
-                  </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Career Info */}
+            <div className="space-y-10">
+              <div>
+                <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Why Join Us</p>
+                <ul className="space-y-4">
+                  <li className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-[#1a2744] mb-1">Professional Growth</p>
+                      <p className="text-gray-600 text-sm">Work with industry leaders and expand your skills</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-[#1a2744] mb-1">Competitive Package</p>
+                      <p className="text-gray-600 text-sm">Attractive salary and benefits</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-[#1a2744] mb-1">Dynamic Environment</p>
+                      <p className="text-gray-600 text-sm">Be part of a fast-paced, innovative team</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-[#1a2744] mb-1">Diverse Projects</p>
+                      <p className="text-gray-600 text-sm">Work on varied and challenging events</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Contact Info</p>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-gray-500 text-xs mb-1 font-semibold">Email</p>
+                    <a href="mailto:info@cecevents.in" className="text-lg font-bold text-[#d4a039] hover:text-[#b8862e] transition-colors">
+                      Info@cecevents.in
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 text-xs mb-1 font-semibold">Phone</p>
+                    <a href="tel:+919654513231" className="text-lg font-bold text-[#1a2744] hover:text-[#d4a039] transition-colors">
+                      +91 9654513231
+                    </a>
+                  </div>
                 </div>
               </div>
-            )}
+
+              <div>
+                <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Follow Us</p>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.linkedin.com/company/cecevents"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-lg bg-[#d4a039]/10 flex items-center justify-center hover:bg-[#d4a039] text-[#d4a039] hover:text-white transition-all shadow-sm"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/chronicleeventsandconferences"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-lg bg-[#d4a039]/10 flex items-center justify-center hover:bg-[#d4a039] text-[#d4a039] hover:text-white transition-all shadow-sm"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://wa.me/919654513231?text=Hello%20Cecevents%2C%20I%20have%20career%20inquiry"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-lg bg-[#25D366]/10 flex items-center justify-center hover:bg-[#25D366] text-[#25D366] hover:text-white transition-all shadow-sm"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
 
             {/* Application Form */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#1a2744] mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent"
-                    placeholder="Your full name"
-                  />
+            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-100 p-8 lg:p-10">
+              <h3 className="text-2xl font-bold text-[#1a2744] mb-2">Application Form</h3>
+              <p className="text-gray-600 mb-8">Tell us about yourself and why you'd be a great fit for our team.</p>
+
+              {submitted && (
+                <div className="bg-green-50 border border-green-300 rounded-lg p-4 mb-6 flex items-center gap-3 animate-in fade-in slide-in-from-top">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-green-900 text-sm">Application Submitted!</p>
+                    <p className="text-green-800 text-xs">Thank you! We'll review your application shortly.</p>
+                  </div>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="full_name"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="your@email.com"
+                    />
+                  </div>
                 </div>
 
-                {/* Email */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#1a2744] mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="+91 98765 43210"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Position Interested In
+                    </label>
+                    <input
+                      type="text"
+                      name="position"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="e.g., Event Coordinator"
+                    />
+                  </div>
                 </div>
 
-                {/* Phone */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#1a2744] mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent"
-                    placeholder="+91 98765 43210"
-                  />
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Current Company
+                    </label>
+                    <input
+                      type="text"
+                      name="current_company"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="Your current employer"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-[#1a2744] mb-2">
+                      Years of Experience
+                    </label>
+                    <input
+                      type="number"
+                      name="experience"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all"
+                      placeholder="0"
+                      min="0"
+                    />
+                  </div>
                 </div>
 
-                {/* Company */}
                 <div>
                   <label className="block text-sm font-semibold text-[#1a2744] mb-2">
-                    Current Company
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent"
-                    placeholder="Your company name (optional)"
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#1a2744] mb-2">
-                    Tell Us About Yourself
+                    Tell Us About Yourself *
                   </label>
                   <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    name="about_yourself"
+                    required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent resize-none"
-                    placeholder="Share your experience, skills, and why you want to join CECEVENTS..."
-                  />
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4a039] focus:border-transparent transition-all resize-none"
+                    placeholder="Share your background, skills, and what excites you about joining our team..."
+                  ></textarea>
                 </div>
 
-                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#d4a039] text-white hover:bg-[#b8862e] py-3 font-semibold text-lg shadow-lg shadow-[#d4a039]/25"
+                  className="w-full bg-[#d4a039] text-white hover:bg-[#b8862e] font-semibold py-3 rounded-lg transition-all shadow-md hover:shadow-lg disabled:opacity-50"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Application'}
                 </Button>
-              </form>
-            </div>
 
-            {/* Contact Info */}
-            <div className="mt-12 bg-[#1a2744] text-white rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <p className="text-gray-300 text-sm mb-2">Email</p>
-                  <p className="font-semibold">info@cecevents.in</p>
-                </div>
-                <div>
-                  <p className="text-gray-300 text-sm mb-2">Phone</p>
-                  <p className="font-semibold">+91 96545 13231</p>
-                </div>
-                <div>
-                  <p className="text-gray-300 text-sm mb-2">WhatsApp</p>
-                  <p className="font-semibold">+91 93154 24253</p>
-                </div>
-              </div>
+                <p className="text-xs text-gray-500 text-center">
+                  All submissions are confidential and reviewed carefully.
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -201,5 +268,5 @@ export default function CareerPage() {
 
       <Footer />
     </div>
-  );
+  )
 }
