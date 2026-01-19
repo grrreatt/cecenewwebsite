@@ -103,10 +103,10 @@ export default function HomePage() {
             </div>
 
             {/* Hero Images Grid */}
-            <div className="relative">
+            <div className="relative group">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl image-hover-container left-stack transition-transform duration-300">
                     <Image
                       src="/gallery/asian-travel-expo.jpg"
                       alt="Asian Travel Expo Registration"
@@ -114,7 +114,7 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl image-hover-container left-stack transition-transform duration-300">
                     <Image
                       src="/gallery/hitachi-event.jpg"
                       alt="Hitachi Event"
@@ -124,7 +124,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl image-hover-container right-stack transition-transform duration-300">
                     <Image
                       src="/gallery/microsoft-blue-registration.jpg"
                       alt="Microsoft Registration"
@@ -132,7 +132,7 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl image-hover-container right-stack transition-transform duration-300">
                     <Image
                       src="/gallery/cfore-team.jpg"
                       alt="Cfore Event Team"

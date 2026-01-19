@@ -56,61 +56,24 @@ export default function CareerPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Career Info */}
-            <div className="space-y-10">
-              <div>
-                <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Why Join Us</p>
-                <ul className="space-y-4">
-                  <li className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-[#1a2744] mb-1">Professional Growth</p>
-                      <p className="text-gray-600 text-sm">Work with industry leaders and expand your skills</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-[#1a2744] mb-1">Competitive Package</p>
-                      <p className="text-gray-600 text-sm">Attractive salary and benefits</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-[#1a2744] mb-1">Dynamic Environment</p>
-                      <p className="text-gray-600 text-sm">Be part of a fast-paced, innovative team</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-[#d4a039] mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-[#1a2744] mb-1">Diverse Projects</p>
-                      <p className="text-gray-600 text-sm">Work on varied and challenging events</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Contact Info</p>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-gray-500 text-xs mb-1 font-semibold">Email</p>
-                    <a href="mailto:info@cecevents.in" className="text-lg font-bold text-[#d4a039] hover:text-[#b8862e] transition-colors">
-                      Info@cecevents.in
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-xs mb-1 font-semibold">Phone</p>
-                    <a href="tel:+919654513231" className="text-lg font-bold text-[#1a2744] hover:text-[#d4a039] transition-colors">
-                      +91 9654513231
-                    </a>
-                  </div>
+            {/* Contact Info */}
+            <div>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-gray-500 text-xs mb-1 font-semibold">Email</p>
+                  <a href="mailto:info@cecevents.in" className="text-lg font-bold text-[#d4a039] hover:text-[#b8862e] transition-colors">
+                    Info@cecevents.in
+                  </a>
+                </div>
+                <div>
+                  <p className="text-gray-500 text-xs mb-1 font-semibold">Phone</p>
+                  <a href="tel:+919654513231" className="text-lg font-bold text-[#1a2744] hover:text-[#d4a039] transition-colors">
+                    +91 9654513231
+                  </a>
                 </div>
               </div>
 
-              <div>
+              <div className="mt-8">
                 <p className="text-gray-500 text-xs font-semibold uppercase mb-4 tracking-wide">Follow Us</p>
                 <div className="flex gap-4">
                   <a
