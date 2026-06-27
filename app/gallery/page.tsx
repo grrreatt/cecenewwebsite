@@ -7,16 +7,16 @@ import { Footer } from '@/components/footer';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/gallery/apao-yashobhumi.jpg', title: 'APAO Congress 2024', category: 'Medical Conference' },
-  { src: '/gallery/microsoft-purple-team.jpg', title: 'Microsoft Event', category: 'Corporate' },
-  { src: '/gallery/cdri-registration.jpg', title: 'CDRI Power Summit', category: 'Government' },
-  { src: '/gallery/siu-world-delhi.jpg', title: 'SIU World Congress', category: 'Medical Conference' },
-  { src: '/gallery/glex-2025.jpg', title: 'GLEX 2025', category: 'Space Conference' },
-  { src: '/gallery/microsoft-blue-registration.jpg', title: 'Microsoft Registration', category: 'Corporate' },
-  { src: '/gallery/wedding-registration.jpg', title: 'Wedding Event', category: 'Social' },
-  { src: '/gallery/cfore-team.jpg', title: 'Cfore Team', category: 'Awards' },
-  { src: '/gallery/training-session.jpg', title: 'Training Session', category: 'Corporate' },
-  { src: '/gallery/cdri-meeting.jpg', title: 'CDRI Meeting', category: 'Government' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.16%20%281%29-mqSHob6utDFIredhwFP2G3OMMwEToj.jpeg', title: 'WOG Water Oil Gas Booth', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.26.45-fglHQJhSCybt14oz0QC46KIjMdmNnd.jpeg', title: 'JMS Sales Collaboration Event', category: 'Corporate Events' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.24.22-reJUvcxgB5Jf4gnEbjj0mtyWRmdWBA.jpeg', title: 'Chempolis & AmGreen Exhibition', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.15-Y3UkEPH3ooQg8UUZgjhVuMIAw0sE8P.jpeg', title: 'Trends Exhibition Booth', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3D%20layouts%20-EItubsNICtT2kT2IBpHY9FarnXwaOi.jpeg', title: 'Continental Solutions Display', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.16-A6ByOjOsezMPfUBXyWJfB2Y9MyF8Gp.jpeg', title: 'Thermax Booth Design', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.16%20%282%29-L58sCEWzfwTDSUroposAckYKCKJFBr.jpeg', title: 'Ratnamamani Metals & Tubes', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gastech%20Milan%20-nHNDLVeRkRDE2nl29jR0xFUvduQn60.jpeg', title: 'Gastech Milan - ONEC', category: 'Large Scale Events' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.26.53%20%281%29-P4mT065Mf3EVA6YNU0FrJS79rS7G61.jpeg', title: 'Mascot Dynamics Booth Design', category: 'Fabrication & Booth Design' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gail-Gastech%20Dubai%20-9zKbSyMwmTq2FDIiOhhh5qHCz749mH.jpeg', title: 'Gail Gastech Dubai', category: 'Large Scale Events' },
 ];
 
 export default function GalleryPage() {
