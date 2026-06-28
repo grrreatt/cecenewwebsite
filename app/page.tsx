@@ -25,12 +25,6 @@ const services = [
     features: ["Trained Professionals", "Formal Attire", "Multilingual Staff", "24/7 Support"]
   },
   {
-    icon: ClipboardCheck,
-    title: "Registration Services",
-    description: "End-to-end registration management with badge printing, delegate check-in, and real-time attendance tracking systems.",
-    features: ["On-site Registration", "Delegate Check-in", "QR Check-in", "Attendance Tracking"]
-  },
-  {
     icon: Calendar,
     title: "Fabrication and Brand Management",
     description: "We manage the entire process—from concept to completion—delivering precision fabrication with consistent brand execution.",
