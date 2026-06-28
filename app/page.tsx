@@ -28,7 +28,7 @@ const services = [
     icon: ClipboardCheck,
     title: "Registration Services",
     description: "End-to-end registration management with badge printing, delegate check-in, and real-time attendance tracking systems.",
-    features: ["On-site Registration", "Badge Printing", "QR Check-in", "Data Analytics"]
+    features: ["On-site Registration", "Delegate Check-in", "QR Check-in", "Attendance Tracking"]
   },
   {
     icon: Calendar,
@@ -308,8 +308,8 @@ export default function HomePage() {
                     <Award className="w-6 h-6 text-[#d4a039]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1a2744]">Real-Time Analytics</p>
-                    <p className="text-sm text-gray-500">Live attendance tracking and reporting</p>
+                    <p className="font-semibold text-[#1a2744]">Delegate Management</p>
+                    <p className="text-sm text-gray-500">Efficient delegate coordination and support</p>
                   </div>
                 </div>
               </div>
