@@ -3,9 +3,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
-  Users,
-  Award,
-  BarChart3,
   Zap,
   Globe,
   MapPinned,
@@ -20,24 +17,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 const services = [
-  {
-    icon: Users,
-    title: "Registration Management",
-    description: "Seamless registration setup and management for all event types with real-time tracking, badge printing, and attendee management systems.",
-    color: "#f4a490",
-  },
-  {
-    icon: Award,
-    title: "Badge Printing",
-    description: "Professional on-site badge printing with custom designs, instant delivery, and integration with registration systems for quick check-ins.",
-    color: "#d4a039",
-  },
-  {
-    icon: BarChart3,
-    title: "Real-Time Analytics",
-    description: "Live dashboards and insights to track attendance, engagement, session popularity, and comprehensive post-event reports.",
-    color: "#f4a490",
-  },
   {
     icon: Zap,
     title: "Manpower Solutions",

@@ -25,12 +25,6 @@ const services = [
     features: ["Trained Professionals", "Formal Attire", "Multilingual Staff", "24/7 Support"]
   },
   {
-    icon: ClipboardCheck,
-    title: "Registration Services",
-    description: "End-to-end registration management with badge printing, delegate check-in, and real-time attendance tracking systems.",
-    features: ["On-site Registration", "Badge Printing", "QR Check-in", "Data Analytics"]
-  },
-  {
     icon: Calendar,
     title: "Fabrication and Brand Management",
     description: "We manage the entire process—from concept to completion—delivering precision fabrication with consistent brand execution.",
@@ -308,8 +302,8 @@ export default function HomePage() {
                     <Award className="w-6 h-6 text-[#d4a039]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1a2744]">Real-Time Analytics</p>
-                    <p className="text-sm text-gray-500">Live attendance tracking and reporting</p>
+                    <p className="font-semibold text-[#1a2744]">Delegate Management</p>
+                    <p className="text-sm text-gray-500">Efficient delegate coordination and support</p>
                   </div>
                 </div>
               </div>
