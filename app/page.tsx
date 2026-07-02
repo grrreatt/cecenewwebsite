@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Users, ClipboardCheck, Calendar, Award, CheckCircle, Phone, Mail, MapPin, Star } from "lucide-react"
+import { ArrowRight, Users, Clipboard, ClipboardCheck, Calendar, Award, CheckCircle, Phone, Mail, MapPin, Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -57,7 +57,10 @@ const services = [
 ]
 
 const clients = [
-  "Microsoft", "Hitachi", "APAO", "SIU World", "GLEX", "CDRI", "Ministry of External Affairs"
+  { name: "Microsoft", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-nTi3Nvl6kAOpoI1qWPd2HuSefSsPMZ.png" },
+  { name: "Hitachi", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-G0nuvgpj4r2O0OqRIwIiRpbDXEah9W.png" },
+  { name: "APAO", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyDKbtDU6fk0mPbkEgPwtLBXC5sJ8Y.png" },
+  { name: "Ministry of External Affairs", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-S1FKuoc1uEm5oRYq6CoXxo5wfDCQGJ.png" },
 ]
 
 export default function HomePage() {
@@ -531,8 +534,14 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {clients.map((client, index) => (
-              <div key={index} className="text-xl md:text-2xl font-bold text-gray-300 hover:text-[#d4a039] transition-colors cursor-default">
-                {client}
+              <div key={index} className="h-20 md:h-24 flex items-center justify-center hover:opacity-80 transition-opacity cursor-default">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={160}
+                  height={80}
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
               </div>
             ))}
           </div>
