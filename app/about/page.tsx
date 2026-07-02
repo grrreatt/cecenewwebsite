@@ -36,10 +36,10 @@ export default function AboutPage() {
                 <span className="text-[#d4a039] italic underline underline-offset-8">Story</span>
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Founded in 2015, CECEVENTS started with a simple vision: to transform how events are managed in India. What began as a small team passionate about creating seamless event experiences has grown into one of the most trusted names in event management.
+                We are a trusted event and business solutions company delivering end-to-end services for organizations across India and globally. Our expertise includes corporate events, conferences, exhibitions, skilled event manpower, corporate travel management, and premium gifting solutions.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Today, we serve clients across the country, from prestigious medical conferences and academic summits to grand corporate events and beautiful weddings. Our commitment to excellence and attention to detail has made us the preferred choice for organizations seeking reliable event management partners.
+                From strategic planning to flawless execution, we combine creativity, precision, and reliability to deliver impactful experiences that strengthen brands and build lasting relationships.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="flex items-start gap-3">

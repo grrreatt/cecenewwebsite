@@ -21,14 +21,38 @@ const services = [
   {
     icon: Users,
     title: "Manpower Solutions",
-    description: "Professional event staff including registration executives, ushers, coordinators, and hospitality personnel for seamless event execution.",
-    features: ["Trained Professionals", "Formal Attire", "Multilingual Staff", "24/7 Support"]
+    description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination.",
+    image: "/gallery/convention-center-team.jpg"
   },
   {
     icon: Calendar,
-    title: "Fabrication and Brand Management",
-    description: "We manage the entire process—from concept to completion—delivering precision fabrication with consistent brand execution.",
-    features: ["Concept to Completion", "Consistent Brand Execution", "Precision Fabrication", "Quality Assurance"]
+    title: "Events",
+    description: "End-to-end event management from concept to successful execution with attention to every detail.",
+    image: "/gallery/apao-yashobhumi.jpg"
+  },
+  {
+    icon: Award,
+    title: "Conferences",
+    description: "Seamless conference management including registration, logistics, and attendee coordination.",
+    image: "/gallery/microsoft-purple-team.jpg"
+  },
+  {
+    icon: Calendar,
+    title: "Exhibitions",
+    description: "Complete exhibition setup, booth management, and attendee engagement solutions.",
+    image: "/gallery/cdri-registration.jpg"
+  },
+  {
+    icon: Users,
+    title: "Weddings",
+    description: "Premium wedding management delivering your dream celebration with flawless execution.",
+    image: "/gallery/wedding-registration.jpg"
+  },
+  {
+    icon: Award,
+    title: "Premium Gifting Solutions",
+    description: "Customized corporate gifting and premium gift solutions for memorable client relationships.",
+    image: "/gallery/siu-world-delhi.jpg"
   },
 ]
 
@@ -50,10 +74,10 @@ export default function HomePage() {
                 Trusted Event Partner Since 2015
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a2744] mb-6 leading-tight">
-                Premium <span className="text-[#d4a039]">Event Staffing</span> & Registration Services
+                Turning Ideas Into <span className="text-[#d4a039]">Extraordinary Events</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
-                India&apos;s leading provider of professional event staffing and seamless registration solutions. From medical conferences to corporate summits, we deliver excellence through trained personnel and cutting-edge technology.
+                We are a trusted event and business solutions company delivering end-to-end services for organizations across India and globally. Our expertise includes corporate events, conferences, exhibitions, skilled event manpower, corporate travel management, and premium gifting solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
@@ -164,23 +188,20 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white group">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-[#d4a039]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#d4a039] transition-colors">
-                    <service.icon className="w-8 h-8 text-[#d4a039] group-hover:text-white transition-colors" />
-                  </div>
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group overflow-hidden">
+                <div className="relative h-56 overflow-hidden rounded-t-lg">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-[#1a2744] mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-[#d4a039]" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
