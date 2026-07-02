@@ -209,6 +209,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Detailed Service Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Manpower Solutions Card */}
+            <Card className="border-0 shadow-lg bg-white rounded-2xl overflow-hidden">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-[#d4a039]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Users className="w-8 h-8 text-[#d4a039]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1a2744] mb-4">Manpower Solutions</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">Professional event staff including registration executives, ushers, coordinators, and hospitality personnel for seamless event execution.</p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Trained Professionals</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Formal Attire</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Multilingual Staff</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>24/7 Support</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Fabrication Card */}
+            <Card className="border-0 shadow-lg bg-white rounded-2xl overflow-hidden">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-[#d4a039]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Clipboard className="w-8 h-8 text-[#d4a039]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1a2744] mb-4">Fabrication and Brand Management</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">We manage the entire process—from concept to completion—delivering precision fabrication with consistent brand execution.</p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Concept to Completion</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Consistent Brand Execution</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Precision Fabrication</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="w-5 h-5 text-[#d4a039] flex-shrink-0" />
+                    <span>Quality Assurance</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Manpower Highlight Section */}
       <section className="py-20 bg-[#1a2744]">
         <div className="container mx-auto px-4">

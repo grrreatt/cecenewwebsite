@@ -39,7 +39,7 @@ export function Header() {
       </div>
       
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo-new.png"
             alt="Cecevents"
@@ -47,6 +47,7 @@ export function Header() {
             height={50}
             className="w-12 h-12"
           />
+          <span className="text-xl font-bold text-[#1a2744]">Cecevent</span>
         </Link>
 
         {/* Desktop Navigation */}
