@@ -22,7 +22,7 @@ const services = [
     icon: Users,
     title: "Manpower Solutions",
     description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/convention-center-team.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/professional-event-staff-team-whqX75fkXfO1kd1YarWQqp.jpg"
   },
   {
     icon: Calendar,
@@ -34,7 +34,7 @@ const services = [
     icon: Award,
     title: "Conferences",
     description: "Seamless conference management including registration, logistics, and attendee coordination.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/microsoft-purple-team.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/corporate-conference-hall-rna-cR0rqGyyIsTm9mO2Uj.jpg"
   },
   {
     icon: Calendar,
@@ -215,6 +215,7 @@ export default function HomePage() {
       {/* Detailed Service Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#d4a039] text-center mb-12">Our Specialized Services</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Manpower Solutions Card */}
             <Card className="border-0 shadow-lg bg-white rounded-2xl overflow-hidden">
