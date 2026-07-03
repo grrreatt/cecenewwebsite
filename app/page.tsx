@@ -22,37 +22,37 @@ const services = [
     icon: Users,
     title: "Manpower Solutions",
     description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/professional-event-staff-team-whqX75fkXfO1kd1YarWQqp.jpg"
+    image: "/professional-event-staff-team.jpg"
   },
   {
     icon: Calendar,
     title: "Events",
     description: "End-to-end event management from concept to successful execution with attention to every detail.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gastech%20Milan%20-nHNDLVeRkRDE2nl29jR0xFUvduQn60.jpeg"
+    image: "/event-check-in-screen.jpg"
   },
   {
     icon: Award,
     title: "Conferences",
     description: "Seamless conference management including registration, logistics, and attendee coordination.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/corporate-conference-hall-rna-cR0rqGyyIsTm9mO2Uj.jpg"
+    image: "/conference-registration-setup-with-attendees.jpg"
   },
   {
     icon: Calendar,
     title: "Exhibitions",
     description: "Complete exhibition setup, booth management, and attendee engagement solutions.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.15-Y3UkEPH3ooQg8UUZgjhVuMIAw0sE8P.jpeg"
+    image: "/exhibition-hall-with-trade-show-booths.jpg"
   },
   {
     icon: Users,
     title: "Weddings",
     description: "Premium wedding management delivering your dream celebration with flawless execution.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/wedding-registration.jpg"
+    image: "/wedding-celebration-with-couple-and-fireworks.jpg"
   },
   {
     icon: Award,
     title: "Premium Gifting Solutions",
     description: "Customized corporate gifting and premium gift solutions for memorable client relationships.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.26.45-fglHQJhSCybt14oz0QC46KIjMdmNnd.jpeg"
+    image: "/networking-event-crowd.jpg"
   },
 ]
 
