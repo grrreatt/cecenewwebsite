@@ -22,37 +22,37 @@ const services = [
     icon: Users,
     title: "Manpower Solutions",
     description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination.",
-    image: "/gallery/convention-center-team.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/convention-center-team.jpg"
   },
   {
     icon: Calendar,
     title: "Events",
     description: "End-to-end event management from concept to successful execution with attention to every detail.",
-    image: "/gallery/apao-yashobhumi.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gastech%20Milan%20-nHNDLVeRkRDE2nl29jR0xFUvduQn60.jpeg"
   },
   {
     icon: Award,
     title: "Conferences",
     description: "Seamless conference management including registration, logistics, and attendee coordination.",
-    image: "/gallery/microsoft-purple-team.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/microsoft-purple-team.jpg"
   },
   {
     icon: Calendar,
     title: "Exhibitions",
     description: "Complete exhibition setup, booth management, and attendee engagement solutions.",
-    image: "/gallery/cdri-registration.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.27.15-Y3UkEPH3ooQg8UUZgjhVuMIAw0sE8P.jpeg"
   },
   {
     icon: Users,
     title: "Weddings",
     description: "Premium wedding management delivering your dream celebration with flawless execution.",
-    image: "/gallery/wedding-registration.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gallery/wedding-registration.jpg"
   },
   {
     icon: Award,
     title: "Premium Gifting Solutions",
     description: "Customized corporate gifting and premium gift solutions for memorable client relationships.",
-    image: "/gallery/siu-world-delhi.jpg"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.26.45-fglHQJhSCybt14oz0QC46KIjMdmNnd.jpeg"
   },
 ]
 
@@ -532,18 +532,31 @@ export default function HomePage() {
             <p className="text-[#d4a039] font-medium mb-2">TRUSTED BY</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a2744]">Our Esteemed Clients</h2>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {clients.map((client, index) => (
-              <div key={index} className="h-20 md:h-24 flex items-center justify-center hover:opacity-80 transition-opacity cursor-default">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={160}
-                  height={80}
-                  className="h-16 md:h-20 w-auto object-contain"
-                />
-              </div>
-            ))}
+          <div className="relative overflow-hidden py-8">
+            <div className="flex gap-12 animate-scroll-left">
+              {clients.map((client, index) => (
+                <div key={index} className="h-20 md:h-24 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-default">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={80}
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+              ))}
+              {clients.map((client, index) => (
+                <div key={`repeat-${index}`} className="h-20 md:h-24 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-default">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={80}
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
