@@ -21,38 +21,32 @@ const services = [
   {
     icon: Users,
     title: "Manpower Solutions",
-    description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination.",
-    image: "/professional-event-staff-team.jpg"
+    description: "Professional event staff for registration desks, crowd management, VIP handling, and complete event coordination."
   },
   {
     icon: Calendar,
     title: "Events",
-    description: "End-to-end event management from concept to successful execution with attention to every detail.",
-    image: "/event-check-in-screen.jpg"
+    description: "End-to-end event management from concept to successful execution with attention to every detail."
   },
   {
     icon: Award,
     title: "Conferences",
-    description: "Seamless conference management including registration, logistics, and attendee coordination.",
-    image: "/conference-registration-setup-with-attendees.jpg"
+    description: "Seamless conference management including registration, logistics, and attendee coordination."
   },
   {
     icon: Calendar,
     title: "Exhibitions",
-    description: "Complete exhibition setup, booth management, and attendee engagement solutions.",
-    image: "/exhibition-hall-with-trade-show-booths.jpg"
+    description: "Complete exhibition setup, booth management, and attendee engagement solutions."
   },
   {
     icon: Users,
     title: "Weddings",
-    description: "Premium wedding management delivering your dream celebration with flawless execution.",
-    image: "/wedding-celebration-with-couple-and-fireworks.jpg"
+    description: "Premium wedding management delivering your dream celebration with flawless execution."
   },
   {
     icon: Award,
     title: "Premium Gifting Solutions",
-    description: "Customized corporate gifting and premium gift solutions for memorable client relationships.",
-    image: "/networking-event-crowd.jpg"
+    description: "Customized corporate gifting and premium gift solutions for memorable client relationships."
   },
 ]
 
@@ -193,18 +187,13 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group overflow-hidden">
-                <div className="relative h-56 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-2">
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 bg-[#d4a039]/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-[#d4a039] transition-colors">
+                    <service.icon className="w-7 h-7 text-[#d4a039] group-hover:text-white transition-colors" />
+                  </div>
                   <h3 className="text-xl font-bold text-[#1a2744] mb-3">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
