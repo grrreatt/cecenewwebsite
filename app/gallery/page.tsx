@@ -38,8 +38,8 @@ export default function GalleryPage() {
       <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1a2744] mb-6">
-              Our <span className="text-[#d4a039]">Gallery</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#d4a039] mb-6">
+              Our Gallery
             </h1>
             <p className="text-lg text-gray-600">
               A glimpse into our successful events and memorable moments with incredible teams and satisfied clients.
