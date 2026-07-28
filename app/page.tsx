@@ -131,8 +131,8 @@ export default function HomePage() {
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl image-hover-container left-stack transition-transform duration-300">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gail-Gastech%20Dubai%20-9zKbSyMwmTq2FDIiOhhh5qHCz749mH.jpeg"
-                      alt="GAIL Gastech Dubai Exhibition"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AdqsFaHjaXpfBbDFDQ0CH6xeslhFis.png"
+                      alt="ONGC India Pavilion Exhibition Booth"
                       fill
                       className="object-cover"
                     />
