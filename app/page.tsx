@@ -123,16 +123,16 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl image-hover-container left-stack transition-transform duration-300">
                     <Image
-                      src="/gallery/asian-travel-expo.jpg"
-                      alt="Asian Travel Expo Registration"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-27%20at%2014.26.53%20%281%29-P4mT065Mf3EVA6YNU0FrJS79rS7G61.jpeg"
+                      alt="Mascot Dynamics Booth Design"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl image-hover-container left-stack transition-transform duration-300">
                     <Image
-                      src="/gallery/hitachi-event.jpg"
-                      alt="Hitachi Event"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gail-Gastech%20Dubai%20-9zKbSyMwmTq2FDIiOhhh5qHCz749mH.jpeg"
+                      alt="GAIL Gastech Dubai Exhibition"
                       fill
                       className="object-cover"
                     />
