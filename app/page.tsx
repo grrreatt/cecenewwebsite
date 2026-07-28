@@ -141,8 +141,8 @@ export default function HomePage() {
                 <div className="space-y-4 pt-8">
                   <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl image-hover-container right-stack transition-transform duration-300">
                     <Image
-                      src="/gallery/microsoft-blue-registration.jpg"
-                      alt="Microsoft Registration"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QjAxO85028rL6FmRFtkZtw0LdmufDC.png"
+                      alt="ONGC India Pavilion Exhibition Booth"
                       fill
                       className="object-cover"
                     />
